@@ -18,3 +18,18 @@ The archive does not create a repository or enable Pages for you. Pages availabi
 ## Try it locally
 
 Open `index.html` in a current browser, or serve this folder using `python3 -m http.server 8000` and open `http://localhost:8000`. Clipboard buttons may require a secure browser context and permission. No package installation or build step is needed.
+
+## Readability update · November 4, 2026
+
+- Short, direct page titles and instructions; repeated task badges and workflow filler removed.
+- Larger body and helper text, darker secondary text, clearer spacing and mobile wrapping.
+- All 12 cognitive tasks, study selection, enrollment samples, team controls and protocol planning remain available.
+- Demo/privacy warnings, reset-on-reload behavior and clinical-validation limitations remain visible.
+- Active navigation now exposes `aria-current`; the publish dialog has an accessible name and description. Keyboard focus is restored after task updates.
+- Fixed sample invitation feedback disappearing immediately and cleared the dialog result before each review so Escape cannot reuse an earlier publish action.
+
+### Verification
+
+Passed JavaScript syntax checking and mocked-DOM state/render regression checks: selections, publish/discard, empty configuration, dialog result reset, sample enrollment, invitation feedback, disabled backend/sign-in, protocol controls, new studies and per-study configuration.
+
+Full browser interaction and visual checks could not run in the build environment because Chromium was blocked from creating its required local socket. Responsive layout and native keyboard/dialog behavior still need a browser smoke test. This package has not been deployed.
